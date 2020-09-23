@@ -14,7 +14,6 @@ describe('workspace-project App', () => {
   });
 
   it('should display required error after touch firstName', () => {
-    page.navigateTo();
     expect(page.getFirstNameError()).toEqual('Error: First Name is required');
   });
 

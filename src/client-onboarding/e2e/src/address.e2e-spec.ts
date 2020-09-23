@@ -14,7 +14,6 @@ describe('workspace-project App', () => {
   });
 
   it('should display required error after touch Addres Line 1', () => {
-    page.navigateTo();
     expect(page.getAddressLine1Error()).toEqual('Error:  Address Line 1 is required');
   });
 

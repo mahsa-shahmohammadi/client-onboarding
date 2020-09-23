@@ -3,7 +3,7 @@
         <h3>Basic Details</h3>
         <form class="k-form" [formGroup]="form">
 
-            <kendo-formfield>
+            <kendo-formfield id="sex-formField">
                 <kendo-label attr.for="sex" text="Sex"></kendo-label>
                 <kendo-dropdownlist [data]="sex" formControlName="sex" (selectionChange)="sexChange($event)">
                 </kendo-dropdownlist>
@@ -38,7 +38,7 @@
                 </kendo-dropdownlist>
             </kendo-formfield>
 
-            <kendo-formfield>
+            <kendo-formfield id='socialSecurityNumber-formField'>
                 <kendo-label attr.for="socialSecurityNumber" text="Social Security Number"></kendo-label>
                 <input kendoTextBox #lastname formControlName="socialSecurityNumber" />
                 <kendo-formerror>Error: Last Name is required</kendo-formerror>
@@ -48,7 +48,7 @@
                 <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
 
                     <button kendoButton (click)="onCancelButtonClick()">Cancel</button>
-                    <button kendoButton (click)="onNextButtonClick()" [primary]='true'>Next Step</button>
+                    <button kendoButton id="submit-details-button" (click)="onNextButtonClick()" [primary]='true'>Next Step</button>
 
                 </div>
             </div>
