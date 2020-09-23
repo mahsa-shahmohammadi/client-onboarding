@@ -1,0 +1,47 @@
+<div class="example">
+    <fieldset class="k-form-fieldset">
+        <h3>Review Details</h3>
+        <dl>
+            <dt>Sex:</dt>
+            <dd>{{(state$ | async).sex}}</dd>
+            <dt>Initials:</dt>
+            <dd>{{(state$ | async).initial}}</dd>
+            <dt>FirstName:</dt>
+            <dd>{{(state$ | async).firstName}}</dd>
+            <dt>LastName:</dt>
+            <dd>{{(state$ | async).lastName}}</dd>
+            <dt>Date Of Birth:</dt>
+            <dd>{{(state$ | async).dateOfBirth | date: 'dd-MM-yyyy'}}</dd>
+            <dt>Nationality:</dt>
+            <dd>{{(state$ | async).nationality}}</dd>
+            <dt>Social Security Number:</dt>
+            <dd>{{(state$ | async).socialSecurityNumber}}</dd>
+        </dl>
+
+        <dl>
+            <dt>Address Line 1:</dt>
+            <dd>{{(state$ | async).addressLine1}}</dd>
+            <dt>Address Line 2:</dt>
+            <dd>{{(state$ | async).addressLine2}}</dd>
+            <dt>Postal Code:</dt>
+            <dd>{{(state$ | async).postalCode}}</dd>
+            <dt>City:</dt>
+            <dd>{{(state$ | async).city}}</dd>
+            <dt>Country:</dt>
+            <dd>{{(state$ | async).country}}</dd>
+            <dt>Mobile:</dt>
+            <dd>{{(state$ | async).mobile}}</dd>
+            <dt>Email:</dt>
+            <dd>{{(state$ | async).email}}</dd>
+        </dl>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
+
+                <button kendoButton (click)="onCancelButtonClick()">Cancel</button>
+                <button kendoButton (click)="onConfirmButtonClick()" [primary]="true">Confirm</button>
+
+            </div>
+        </div>
+    </fieldset>
+</div>

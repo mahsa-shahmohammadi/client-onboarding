@@ -1,0 +1,54 @@
+<div class="example">
+    <fieldset class="k-form-fieldset">
+        <h3>Address Details</h3>
+        <form class="k-form" [formGroup]="form">
+
+            <kendo-formfield>
+                <kendo-label attr.for="addressLine1" text="Address Line 1"></kendo-label>
+                <input kendoTextBox #addressLine1 formControlName="addressLine1" />
+                <kendo-formerror>Error: Address Line 1 is required</kendo-formerror>
+            </kendo-formfield>
+
+            <kendo-formfield>
+                <kendo-label attr.for="addressLine2" text="Address Line 2"></kendo-label>
+                <input kendoTextBox #addressLine2 formControlName="addressLine2" />
+            </kendo-formfield>
+
+            <kendo-formfield>
+                <kendo-label attr.for="postalCode" text="Postal Code"></kendo-label>
+                <kendo-maskedtextbox formControlName="postalCode" [mask]="'00000'"></kendo-maskedtextbox>
+            </kendo-formfield>
+
+            <kendo-formfield>
+                <kendo-label attr.for="city" text="City"></kendo-label>
+                <input kendoTextBox #addressLine2 formControlName="city" />
+            </kendo-formfield>
+
+            <kendo-formfield>
+                <kendo-label attr.for="country" text="Country"></kendo-label>
+                <kendo-dropdownlist [data]="country" formControlName="country"
+                    (selectionChange)="countryChange($event)">
+                </kendo-dropdownlist>
+            </kendo-formfield>
+
+            <kendo-formfield>
+                <kendo-label attr.for="phoneNumber" text="Phone Number"></kendo-label>
+                <kendo-maskedtextbox formControlName="phoneNumber" [mask]="'(+ 00 ) 0000000000'"></kendo-maskedtextbox>
+            </kendo-formfield>
+
+            <kendo-formfield>
+                <kendo-label attr.for="email" text="Email"></kendo-label>
+                <input kendoTextBox #email formControlName="email" />
+            </kendo-formfield>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
+
+                    <button kendoButton (click)="onCancelButtonClick()">Cancel</button>
+                    <button kendoButton (click)="onNextButtonClick()" [primary]="true">Next Step</button>
+
+                </div>
+            </div>
+        </form>
+    </fieldset>
+</div>
