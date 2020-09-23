@@ -3,15 +3,16 @@
         <h3>Address Details</h3>
         <form class="k-form" [formGroup]="form">
 
-            <kendo-formfield>
+            <kendo-formfield id='addressLine1-formField'>
                 <kendo-label attr.for="addressLine1" text="Address Line 1"></kendo-label>
                 <input kendoTextBox #addressLine1 formControlName="addressLine1" />
                 <kendo-formerror>Error: Address Line 1 is required</kendo-formerror>
             </kendo-formfield>
 
-            <kendo-formfield>
+            <kendo-formfield id='addressLine2-formField'>
                 <kendo-label attr.for="addressLine2" text="Address Line 2"></kendo-label>
                 <input kendoTextBox #addressLine2 formControlName="addressLine2" />
+                <kendo-formerror>Error: Address Line 2 is required</kendo-formerror>
             </kendo-formfield>
 
             <kendo-formfield>

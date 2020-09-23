@@ -1,16 +1,17 @@
-import { AppPage } from './app.po';
+
 import { browser, logging } from 'protractor';
+import { ReviewsPage } from './review.po';
 
 describe('workspace-project App', () => {
-  let page: AppPage;
+  let page: ReviewsPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new ReviewsPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display review step', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('client-onboarding app is running!');
+    expect(page.getAddressStepTitleText()).toEqual('Review Details');
   });
 
   afterEach(async () => {
